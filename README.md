@@ -1,4 +1,4 @@
-### Essential Commands
+## Essential Commands
 
 #### System Update and Upgrade
 <details>
@@ -88,7 +88,7 @@ sudo userdel -r <username>
 </details>
 
 
-### Installing Software
+## Installing Software
 
 #### Install Mullvad VPN
 <details>
