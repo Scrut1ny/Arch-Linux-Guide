@@ -66,17 +66,17 @@ sudo pacman -Rns $(pacman -Qdtq)
 <details>
 <summary>User Management</summary>
 
-Add a new user:
+#### Add a new user:
 ```
 sudo useradd -m <username>
 ```
 
-Set a password for a user:
+#### Set a password for a user:
 ```
 sudo passwd <username>
 ```
 
-Delete a user:
+#### Delete a user:
 ```
 sudo userdel -r <username>
 ```
@@ -121,10 +121,12 @@ rm -rf mullvad-vpn-bin/
 <details>
 <summary>Kitty (Terminal)</summary>
 
+#### Install Kitty
 ```
 sudo pacman -S kitty
 ```
 
+#### Configure Kitty theme
 ```
 kitty +kitten themes
 ```
