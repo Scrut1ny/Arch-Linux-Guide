@@ -47,6 +47,23 @@ pacman -Qi <package-name>
 </details>
 
 
+#### System Maintenance
+<details>
+<summary>Expand...</summary>
+
+#### Clean the package cache:
+```
+sudo pacman -Sc
+```
+
+#### Remove all unused packages and dependencies:
+```
+sudo pacman -Rns $(pacman -Qdtq)
+```
+
+</details>
+
+
 #### Install Mullvad VPN
 <details>
 <summary>Expand...</summary>
