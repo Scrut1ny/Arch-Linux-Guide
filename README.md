@@ -1,3 +1,52 @@
+#### System Update and Upgrade
+<details>
+<summary>Expand...</summary>
+
+### Update package lists and upgrade all packages:
+```
+sudo pacman -Syu
+```
+
+</details>
+
+
+#### Package Management
+<details>
+<summary>Expand...</summary>
+
+### Install a package:
+```
+sudo pacman -S <package-name>
+```
+
+### Remove a package:
+```
+sudo pacman -R <package-name>
+```
+
+### Remove a package and its dependencies:
+```
+sudo pacman -Rns <package-name>
+```
+
+### Search for a package:
+```
+pacman -Ss <package-name>
+```
+
+### List installed packages:
+```
+pacman -Q
+```
+
+### Display information about a package:
+```
+pacman -Qi <package-name>
+```
+
+</details>
+
+
 #### Install Mullvad VPN
 <details>
 <summary>Expand...</summary>
