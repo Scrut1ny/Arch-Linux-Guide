@@ -2,7 +2,7 @@
 <details>
 <summary>Expand...</summary>
 
-### Update package lists and upgrade all packages:
+#### Update package lists and upgrade all packages:
 ```
 sudo pacman -Syu
 ```
@@ -14,32 +14,32 @@ sudo pacman -Syu
 <details>
 <summary>Expand...</summary>
 
-### Install a package:
+#### Install a package:
 ```
 sudo pacman -S <package-name>
 ```
 
-### Remove a package:
+#### Remove a package:
 ```
 sudo pacman -R <package-name>
 ```
 
-### Remove a package and its dependencies:
+#### Remove a package and its dependencies:
 ```
 sudo pacman -Rns <package-name>
 ```
 
-### Search for a package:
+#### Search for a package:
 ```
 pacman -Ss <package-name>
 ```
 
-### List installed packages:
+#### List installed packages:
 ```
 pacman -Q
 ```
 
-### Display information about a package:
+#### Display information about a package:
 ```
 pacman -Qi <package-name>
 ```
