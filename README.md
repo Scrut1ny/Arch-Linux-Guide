@@ -1,3 +1,5 @@
+### Essential Commands
+
 #### System Update and Upgrade
 <details>
 <summary>Expand...</summary>
@@ -63,6 +65,30 @@ sudo pacman -Rns $(pacman -Qdtq)
 
 </details>
 
+
+#### User Management
+<details>
+<summary>Expand...</summary>
+
+Add a new user:
+```
+sudo useradd -m <username>
+```
+
+Set a password for a user:
+```
+sudo passwd <username>
+```
+
+Delete a user:
+```
+sudo userdel -r <username>
+```
+
+</details>
+
+
+### Installing Software
 
 #### Install Mullvad VPN
 <details>
