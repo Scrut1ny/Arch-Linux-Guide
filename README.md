@@ -11,9 +11,8 @@ sudo pacman -Syu
 </details>
 
 
-#### Package Management
 <details>
-<summary>Expand...</summary>
+<summary>Package Management</summary>
 
 #### Install a package:
 ```
@@ -48,9 +47,8 @@ pacman -Qi <package-name>
 </details>
 
 
-#### System Maintenance
 <details>
-<summary>Expand...</summary>
+<summary>System Maintenance</summary>
 
 #### Clean the package cache:
 ```
@@ -65,9 +63,8 @@ sudo pacman -Rns $(pacman -Qdtq)
 </details>
 
 
-#### User Management
 <details>
-<summary>Expand...</summary>
+<summary>User Management</summary>
 
 Add a new user:
 ```
@@ -89,9 +86,8 @@ sudo userdel -r <username>
 
 ## Installing Software
 
-#### Install Mullvad VPN
 <details>
-<summary>Expand...</summary>
+<summary>Install Mullvad VPN</summary>
 
 ```
 # Clone the Mullvad VPN binary repository
