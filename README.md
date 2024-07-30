@@ -116,3 +116,17 @@ rm -rf mullvad-vpn-bin/
 ```
 
 </details>
+
+
+<details>
+<summary>Kitty (Terminal)</summary>
+
+```
+sudo pacman -S kitty
+```
+
+```
+kitty +kitten themes
+```
+
+</details>
