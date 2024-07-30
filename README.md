@@ -1,8 +1,7 @@
 ## Essential Commands
 
-#### System Update and Upgrade
 <details>
-<summary>Expand...</summary>
+<summary>System Update and Upgrade</summary>
 
 #### Update package lists and upgrade all packages:
 ```
