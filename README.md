@@ -87,7 +87,7 @@ sudo userdel -r <username>
 ## Installing Software
 
 <details>
-<summary>Install Mullvad VPN</summary>
+<summary>Mullvad VPN</summary>
 
 ```
 # Clone the Mullvad VPN binary repository
@@ -135,7 +135,7 @@ kitty +kitten themes
 
 
 <details>
-<summary>Install ollama</summary>
+<summary>ollama</summary>
 
 #### Install ollama
 ```
