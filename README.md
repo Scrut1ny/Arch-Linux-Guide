@@ -132,3 +132,32 @@ kitty +kitten themes
 ```
 
 </details>
+
+
+
+
+## Personal Commands
+
+<details>
+<summary>Install all Apps</summary>
+
+```
+sudo pacman -Syu # Update package lists and upgrade all packages
+
+sudo pacman -Sc # Clean the package cache
+sudo pacman -Rns $(pacman -Qdtq) # Remove all unused packages and dependencies
+
+kitty +kitten themes "Everforest Dark Hard"
+
+flapak install -y io.gitlab.librewolf-community
+flapak install -y org.keepassxc.KeePassXC
+flapak install -y io.freetubeapp.FreeTube
+flapak install -y org.flameshot.Flameshot
+flapak install -y com.atlauncher.ATLauncher
+flapak install -y org.signal.Signal
+flapak install -y com.github.tchx84.Flatseal
+
+
+```
+
+</details>
