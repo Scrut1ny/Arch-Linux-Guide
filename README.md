@@ -134,6 +134,22 @@ kitty +kitten themes
 </details>
 
 
+<details>
+<summary>Install ollama</summary>
+
+#### Install ollama
+```
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+#### Install any llama instance
+
+- [https://ollama.com/](https://ollama.com/)
+```
+ollama run taozhiyuai/llama-3-8b-lexi-uncensored:f16
+```
+
+</details>
 
 
 ## Personal Commands
