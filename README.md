@@ -125,10 +125,25 @@ rm -rf mullvad-vpn-bin/
 ```
 sudo pacman -S kitty
 ```
-
 #### Configure Kitty theme
 ```
 kitty +kitten themes
+```
+
+</details>
+
+
+<details>
+<summary>yt-dlp & ffmpeg</summary>
+
+#### Install yt-dlp
+```
+sudo curl -fsSL https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+sudo chmod +x /usr/local/bin/yt-dlp
+```
+#### Install ffmpeg
+```
+sudo pacman -S ffmpeg
 ```
 
 </details>
