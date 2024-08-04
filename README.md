@@ -255,3 +255,16 @@ flapak install -y com.github.tchx84.Flatseal
 ```
 
 </details>
+
+
+## Troubleshooting
+
+<details>
+<summary>KDE Plasma - Missing Touchpad Settings Page</summary>
+
+#### How to fix:
+```
+kcmshell6 kcm_touchpad
+```
+
+</details>
