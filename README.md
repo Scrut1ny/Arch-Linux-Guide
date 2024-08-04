@@ -84,6 +84,8 @@ sudo userdel -r <username>
 </details>
 
 
+## Networking
+
 <details>
 <summary>Basic Network Commands</summary>
 
@@ -108,7 +110,6 @@ traceroute <host>
 ```
 
 </details>
-
 
 <details>
 <summary>Configuration and Management</summary>
