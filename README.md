@@ -230,6 +230,19 @@ ollama run taozhiyuai/llama-3-8b-lexi-uncensored:f16
 </details>
 
 
+## Troubleshooting
+
+<details>
+<summary>KDE Plasma</summary>
+
+#### Missing Touchpad Settings Page
+```
+kcmshell6 kcm_touchpad
+```
+
+</details>
+
+
 ## Personal Commands
 
 <details>
@@ -252,19 +265,6 @@ flapak install -y org.signal.Signal
 flapak install -y com.github.tchx84.Flatseal
 
 
-```
-
-</details>
-
-
-## Troubleshooting
-
-<details>
-<summary>KDE Plasma</summary>
-
-#### Missing Touchpad Settings Page
-```
-kcmshell6 kcm_touchpad
 ```
 
 </details>
