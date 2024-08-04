@@ -84,6 +84,68 @@ sudo userdel -r <username>
 </details>
 
 
+<details>
+<summary>Basic Network Commands</summary>
+
+#### List network interfaces:
+```
+ip link show
+```
+
+#### Show IP addresses and network details:
+```
+ip addr show
+```
+
+#### Test connectivity to a host:
+```
+ping <host>
+```
+
+#### Trace the path to a host:
+```
+traceroute <host>
+```
+
+</details>
+
+
+<details>
+<summary>Configuration and Management</summary>
+
+#### Bring an interface up:
+```
+sudo ip link set <interface> up
+```
+
+#### Bring an interface down:
+```
+sudo ip link set <interface> down
+```
+
+#### Add an IP address to an interface:
+```
+sudo ip addr add <IP>/<prefix> dev <interface>
+```
+
+#### Remove an IP address from an interface:
+```
+sudo ip addr del <IP>/<prefix> dev <interface>
+```
+
+#### Check NetworkManager status:
+```
+systemctl status NetworkManager
+```
+
+#### Restart NetworkManager:
+```
+sudo systemctl restart NetworkManager
+```
+
+</details>
+
+
 ## Installing Software
 
 <details>
