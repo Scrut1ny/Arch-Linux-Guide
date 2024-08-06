@@ -146,6 +146,21 @@ sudo systemctl restart NetworkManager
 
 </details>
 
+<details>
+<summary>Setup Wi-Fi</summary>
+
+#### Install Necessary Packages
+```
+sudo pacman -S iw wpa_supplicant dialog --noconfirm
+```
+
+#### Restart NetworkManager
+```
+sudo systemctl restart NetworkManager
+```
+
+</details>
+
 
 ## Installing Software
 
