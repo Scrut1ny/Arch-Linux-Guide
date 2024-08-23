@@ -5,7 +5,7 @@
 
 #### Update package lists and upgrade all packages:
 ```
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 ```
 
 </details>
@@ -52,12 +52,12 @@ pacman -Qi <package-name>
 
 #### Clean the package cache:
 ```
-sudo pacman -Sc
+sudo pacman -Sc --noconfirm
 ```
 
 #### Remove all unused packages and dependencies:
 ```
-sudo pacman -Rns $(pacman -Qdtq)
+sudo pacman -Rns $(pacman -Qdtq) --noconfirm
 ```
 
 </details>
