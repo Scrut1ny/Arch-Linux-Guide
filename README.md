@@ -212,6 +212,27 @@ kitty +kitten themes
 
 
 <details>
+<summary>SC Reader (CAC)</summary>
+
+- [https://public.cyber.mil/pki-pke/end-users/getting-started/linux/](https://public.cyber.mil/pki-pke/end-users/getting-started/linux/)
+- [https://public.cyber.mil/pki-pke/end-users/getting-started/linux-firefox/](https://public.cyber.mil/pki-pke/end-users/getting-started/linux-firefox/)
+
+#### Install OpenSC
+```
+sudo pacman -Sy ccid opensc --noconfirm
+```
+#### Start and enable service on start
+```
+sudo systemctl start pcscd.service
+sudo systemctl enable pcscd.service
+```
+
+- [DoD PKI PKCS#7 CA](https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_v5-6_dod.zip)
+
+</details>
+
+
+<details>
 <summary>yt-dlp & ffmpeg</summary>
 
 #### Install yt-dlp
