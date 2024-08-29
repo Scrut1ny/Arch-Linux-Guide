@@ -217,9 +217,9 @@ kitty +kitten themes
 - [https://public.cyber.mil/pki-pke/end-users/getting-started/linux/](https://public.cyber.mil/pki-pke/end-users/getting-started/linux/)
 - [https://public.cyber.mil/pki-pke/end-users/getting-started/linux-firefox/](https://public.cyber.mil/pki-pke/end-users/getting-started/linux-firefox/)
 
-#### Install OpenSC
+#### Install required packages
 ```
-sudo pacman -Sy ccid opensc --noconfirm
+sudo pacman -Sy ccid opensc pcsc-tools --noconfirm
 ```
 #### Start and enable service on start
 ```
