@@ -62,7 +62,8 @@ sudo pacman -Rns $(pacman -Qdtq) --noconfirm
 
 </details>
 
-
+sudo systemctl start pcscd.service
+sudo systemctl enable pcscd.service
 <details>
 <summary>User Management</summary>
 
@@ -223,8 +224,7 @@ sudo pacman -Sy ccid opensc pcsc-tools --noconfirm
 ```
 #### Start and enable service on start
 ```
-sudo systemctl start pcscd.service
-sudo systemctl enable pcscd.service
+sudo systemctl start pcscd.service && sudo systemctl enable pcscd.service
 ```
 
 - [DoD PKI PKCS#7 CA](https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_v5-6_dod.zip)
