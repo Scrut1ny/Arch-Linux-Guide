@@ -62,8 +62,7 @@ sudo pacman -Rns $(pacman -Qdtq) --noconfirm
 
 </details>
 
-sudo systemctl start pcscd.service
-sudo systemctl enable pcscd.service
+
 <details>
 <summary>User Management</summary>
 
