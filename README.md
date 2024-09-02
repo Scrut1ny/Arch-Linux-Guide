@@ -225,6 +225,11 @@ sudo pacman -Sy ccid opensc pcsc-tools --noconfirm
 ```
 sudo systemctl start pcscd.service && sudo systemctl enable pcscd.service
 ```
+#### Load security device
+- Navigate to Settings > Privacy & Security > Security Devices and click "Load" to load a module using:
+```
+/usr/lib/opensc-pkcs11.so
+```
 
 - [DoD PKI PKCS#7 CA](https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_v5-6_dod.zip)
 
