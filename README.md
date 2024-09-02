@@ -226,7 +226,7 @@ sudo pacman -Sy ccid opensc --noconfirm
 /usr/lib/opensc-pkcs11.so
 ```
 ```
-modutil -dbdir "/home/null/.var/app/io.gitlab.librewolf-community/.librewolf/*.default/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
+modutil -dbdir "$HOME/.var/app/io.gitlab.librewolf-community/.librewolf/*.default/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
 ```
 
 </details>
