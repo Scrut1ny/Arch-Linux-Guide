@@ -136,12 +136,12 @@ sudo ip addr del <IP>/<prefix> dev <interface>
 
 #### Check NetworkManager status:
 ```
-systemctl status NetworkManager
+systemctl status NetworkManager.service
 ```
 
 #### Restart NetworkManager:
 ```
-sudo systemctl restart NetworkManager
+sudo systemctl restart NetworkManager.service
 ```
 
 </details>
