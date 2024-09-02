@@ -156,7 +156,7 @@ sudo pacman -S iw wpa_supplicant dialog --noconfirm
 
 #### Restart NetworkManager
 ```
-sudo systemctl restart NetworkManager
+sudo systemctl restart NetworkManager.service
 ```
 
 </details>
@@ -201,7 +201,7 @@ rm -rf mullvad-vpn-bin/
 
 #### Install Kitty
 ```
-sudo pacman -S kitty
+sudo pacman -S kitty --noconfirm
 ```
 #### Configure Kitty theme
 ```
@@ -242,7 +242,7 @@ sudo chmod +x /usr/local/bin/yt-dlp
 ```
 #### Install ffmpeg
 ```
-sudo pacman -S ffmpeg
+sudo pacman -S ffmpeg --noconfirm
 ```
 
 </details>
