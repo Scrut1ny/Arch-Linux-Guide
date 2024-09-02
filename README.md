@@ -212,26 +212,19 @@ kitty +kitten themes
 
 
 <details>
-<summary>SC Reader (CAC)</summary>
+<summary>Common Access Card (CAC) / Smartcard</summary>
 
-- [https://public.cyber.mil/pki-pke/end-users/getting-started/linux/](https://public.cyber.mil/pki-pke/end-users/getting-started/linux/)
-- [https://public.cyber.mil/pki-pke/end-users/getting-started/linux-firefox/](https://public.cyber.mil/pki-pke/end-users/getting-started/linux-firefox/)
+- [Common Access Card](https://wiki.archlinux.org/title/Common_Access_Card)
 
 #### Install required packages
 ```
-sudo pacman -Sy ccid opensc pcsc-tools --noconfirm
-```
-#### Start and enable service on start
-```
-sudo systemctl start pcscd.service && sudo systemctl enable pcscd.service
+sudo pacman -Sy ccid opensc --noconfirm
 ```
 #### Load security device
 - Navigate to Settings > Privacy & Security > Security Devices and click "Load" to load a module using:
 ```
 /usr/lib/opensc-pkcs11.so
 ```
-
-- [DoD PKI PKCS#7 CA](https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_v5-6_dod.zip)
 
 </details>
 
