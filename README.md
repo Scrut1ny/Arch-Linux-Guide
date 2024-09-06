@@ -285,10 +285,10 @@ kcmshell6 kcm_touchpad
 <summary>Install all Apps</summary>
 
 ```
-sudo pacman -Syu # Update package lists and upgrade all packages
+sudo pacman -Syu --noconfirm # Update package lists and upgrade all packages
 
-sudo pacman -Sc # Clean the package cache
-sudo pacman -Rns $(pacman -Qdtq) # Remove all unused packages and dependencies
+sudo pacman -Sc --noconfirm # Clean the package cache
+sudo pacman -Rns $(pacman -Qdtq) --noconfirm # Remove all unused packages and dependencies
 
 kitty +kitten themes "Everforest Dark Hard"
 
