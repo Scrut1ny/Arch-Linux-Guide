@@ -186,11 +186,8 @@ gpg --fingerprint admin@mullvad.net
 # Set the build directory and build the package
 BUILDDIR=/tmp/makepkg makepkg -sirc
 
-# Navigate out of the repository directory
-cd ..
-
 # Clean up by removing the repository directory
-rm -rf mullvad-vpn-bin/
+cd .. && rm -rf mullvad-vpn-bin/
 ```
 
 </details>
