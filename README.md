@@ -289,13 +289,13 @@ sudo pacman -Rns $(pacman -Qdtq) --noconfirm # Remove all unused packages and de
 
 kitty +kitten themes "Everforest Dark Hard"
 
-flapak install -y io.gitlab.librewolf-community
-flapak install -y org.keepassxc.KeePassXC
-flapak install -y io.freetubeapp.FreeTube
-flapak install -y org.flameshot.Flameshot
-flapak install -y com.atlauncher.ATLauncher
-flapak install -y org.signal.Signal
-flapak install -y com.github.tchx84.Flatseal
+flatpak install -y io.gitlab.librewolf-community
+flatpak install -y org.keepassxc.KeePassXC
+flatpak install -y io.freetubeapp.FreeTube
+flatpak install -y org.flameshot.Flameshot
+flatpak install -y com.atlauncher.ATLauncher
+flatpak install -y org.signal.Signal
+flatpak install -y com.github.tchx84.Flatseal
 
 
 ```
