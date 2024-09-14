@@ -167,6 +167,13 @@ sudo systemctl restart NetworkManager.service
 <details>
 <summary>Mullvad VPN</summary>
 
+- Configure System Build Enviroment
+```
+sudo nano /etc/makepkg.conf
+mkdir -p ~/build/{packages,sources,srcpackages}
+```
+
+- Install
 ```
 # Clone the Mullvad VPN binary repository
 git clone https://aur.archlinux.org/mullvad-vpn-bin.git
