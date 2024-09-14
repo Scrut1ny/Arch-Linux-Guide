@@ -285,6 +285,36 @@ ollama run taozhiyuai/llama-3-8b-lexi-uncensored:f16
 kcmshell6 kcm_touchpad
 ```
 
+#### Display Manager Frozen
+
+- Quick Way
+```
+for dm in gdm sddm lightdm xdm; do sudo systemctl restart ${dm}.service 2>/dev/null; done
+```
+
+- Fancy Way
+```
+#!/bin/bash
+
+# Check for the active display manager and set the appropriate variable
+for dm in gdm sddm lightdm xdm; do
+    if systemctl is-active --quiet "${dm}.service"; then
+        active_dm="${dm}"
+        break
+    fi
+done
+
+# Check if an active display manager was found
+if [ -z "$active_dm" ]; then
+    echo "No display manager is currently active."
+    exit 1
+fi
+
+# Restart the detected display manager
+echo "Restarting ${active_dm} service..."
+systemctl restart "${active_dm}.service"
+```
+
 </details>
 
 
