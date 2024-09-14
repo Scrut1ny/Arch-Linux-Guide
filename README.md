@@ -231,11 +231,11 @@ sudo systemctl enable pcscd
 ```
 - Flatpak Install
 ```
-modutil -dbdir "$HOME/.var/app/io.gitlab.librewolf-community/.librewolf/*.default/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
+modutil -dbdir "$HOME/.var/app/io.gitlab.librewolf-community/.librewolf/*/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
 ```
 - System Install
 ```
-modutil -dbdir "$HOME/.mozilla/firefox/*.default/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
+modutil -dbdir "$HOME/.mozilla/firefox/*/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
 ```
 
 </details>
