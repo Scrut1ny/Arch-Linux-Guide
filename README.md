@@ -285,6 +285,11 @@ ollama run taozhiyuai/llama-3-8b-lexi-uncensored:f16
 kcmshell6 kcm_touchpad
 ```
 
+</details>
+
+<details>
+<summary>Display Manager</summary>
+
 #### Display Manager Frozen
 
 - Quick Way
