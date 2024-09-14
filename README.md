@@ -217,13 +217,25 @@ kitty +kitten themes
 ```
 sudo pacman -Sy ccid opensc --noconfirm
 ```
+
+#### Start & Enable the PC/SC Smart Card Daemon
+```
+sudo systemctl start pcscd
+sudo systemctl enable pcscd
+```
+
 #### Load security device
 - Navigate to Settings > Privacy & Security > Security Devices and click "Load" to load a module using:
 ```
 /usr/lib/opensc-pkcs11.so
 ```
+- Flatpak Install
 ```
 modutil -dbdir "$HOME/.var/app/io.gitlab.librewolf-community/.librewolf/*.default/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
+```
+- System Install
+```
+modutil -dbdir "$HOME/.mozilla/firefox/*.default/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
 ```
 
 </details>
