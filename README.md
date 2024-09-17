@@ -167,6 +167,8 @@ sudo systemctl restart NetworkManager.service
 <details>
 <summary>Setup Bluetooth</summary>
 
+- [Arch Wiki](https://wiki.archlinux.org/title/Bluetooth)
+
 #### Install the required packages:
 ```
 sudo pacman -S bluez bluez-utils --noconfirm
