@@ -149,14 +149,43 @@ sudo systemctl restart NetworkManager.service
 <details>
 <summary>Setup Wi-Fi</summary>
 
-#### Install Necessary Packages
+#### Install Necessary Packages:
 ```
 sudo pacman -S iw wpa_supplicant dialog --noconfirm
 ```
 
-#### Restart NetworkManager
+#### Restart NetworkManager:
 ```
 sudo systemctl restart NetworkManager.service
+```
+
+</details>
+
+
+</details>
+
+<details>
+<summary>Setup Bluetooth</summary>
+
+#### Install the required packages:
+```
+sudo pacman -S bluez bluez-utils --noconfirm
+```
+
+#### Start and enable the Bluetooth service:
+```
+sudo systemctl start bluetooth.service
+sudo systemctl enable bluetooth.service
+```
+
+#### Verify the service is running:
+```
+systemctl status bluetooth.service
+```
+
+#### Use bluetoothctl to manage Bluetooth devices:
+```
+bluetoothctl
 ```
 
 </details>
