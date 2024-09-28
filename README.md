@@ -250,6 +250,10 @@ kitty +kitten themes
 <summary>Common Access Card (CAC) / Smartcard</summary>
 
 - [Common Access Card](https://wiki.archlinux.org/title/Common_Access_Card)
+- [militarycac.com](https://militarycac.com/linux.htm)
+- [dod-cac-ubuntu-linuxmint](https://cubiclenate.com/linux/applications/utilities/dod-cac-ubuntu-linuxmint/)
+- [cac-scripts](https://github.com/csmig/cac-scripts)
+- [linux_cac](https://github.com/jdjaxon/linux_cac)
 
 #### Install required packages
 ```
