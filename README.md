@@ -280,6 +280,16 @@ modutil -dbdir "$HOME/.var/app/io.gitlab.librewolf-community/.librewolf/*/cert9.
 modutil -dbdir "$HOME/.mozilla/firefox/*/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
 ```
 
+#### List available PKCS #11 Modules
+```
+modutil -dbdir sql:.pki/nssdb/ -list
+```
+
+#### Add custom "CAC Module" to PKCS #11 Module
+```
+modutil -dbdir sql:.pki/nssdb/ -add "CAC Module" -libfile /usr/lib/opensc-pkcs11.so
+```
+
 </details>
 
 
