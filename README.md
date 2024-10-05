@@ -232,6 +232,24 @@ cd .. && rm -rf mullvad-vpn-bin/
 
 
 <details>
+<summary>Tor Service</summary>
+
+- Install, Enable and Start the Tor Service
+```
+sudo pacman -S tor --noconfirm
+sudo systemctl enable tor.service
+sudo systemctl start tor.service
+```
+
+- Check the Service Status
+```
+sudo systemctl status tor.service
+```
+
+</details>
+
+
+<details>
 <summary>Kitty (Terminal)</summary>
 
 #### Install Kitty
