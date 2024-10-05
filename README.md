@@ -241,9 +241,19 @@ sudo systemctl enable tor.service
 sudo systemctl start tor.service
 ```
 
-#### Check the Service Status
+#### Check the Service Status (Optional)
 ```
 sudo systemctl status tor.service
+```
+
+#### Configure Tor (Optional)
+```
+sudo nano /etc/tor/torrc
+```
+
+#### Restart Tor (Optional)
+```
+sudo systemctl restart tor
 ```
 
 </details>
