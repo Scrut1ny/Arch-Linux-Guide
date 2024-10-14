@@ -206,7 +206,7 @@ pactl load-module module-combine-sink
 #### Configure System Build Enviroment
 ```
 sudo nano /etc/makepkg.conf
-mkdir -p ~/build/{packages,sources,srcpackages}
+mkdir -p ~/build/{packages,sources,srcpackages,makepkglogs}
 ```
 
 #### Install
