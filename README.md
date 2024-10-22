@@ -201,6 +201,27 @@ pactl load-module module-combine-sink
 ## Installing Software
 
 <details>
+<summary>macchanger</summary>
+
+#### Install macchanger
+```
+sudo pacman -S macchanger
+```
+
+#### Spoof MAC Address of wlan0
+```
+sudo ip link set wlan0 down
+
+sudo macchanger -r wlan0
+
+sudo ip link set wlan0 up
+```
+
+</details>
+
+
+
+<details>
 <summary>Mullvad VPN</summary>
 
 #### Configure System Build Enviroment
