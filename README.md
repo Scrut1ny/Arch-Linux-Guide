@@ -238,6 +238,10 @@ sudo ip link set "$INTERFACE" up
 #### Configure System Build Enviroment
 ```
 sudo nano /etc/makepkg.conf
+```
+![config](https://github.com/user-attachments/assets/2cae9a80-db70-452a-ad00-5a863d42bdc3)
+
+```
 mkdir -p ~/build/{packages,sources,srcpackages,makepkglogs}
 ```
 
