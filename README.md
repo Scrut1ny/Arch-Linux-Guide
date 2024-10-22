@@ -151,7 +151,7 @@ sudo systemctl restart NetworkManager.service
 
 #### Install Necessary Packages:
 ```
-sudo pacman -S iw wpa_supplicant dialog --noconfirm
+sudo pacman -S wpa_supplicant dialog --noconfirm
 ```
 
 #### Restart NetworkManager:
