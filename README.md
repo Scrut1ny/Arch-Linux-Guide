@@ -205,7 +205,7 @@ pactl load-module module-combine-sink
 
 #### Install macchanger
 ```
-sudo pacman -S macchanger
+sudo pacman -S macchanger --noconfirm
 ```
 
 #### Spoof MAC Address of wlan0
