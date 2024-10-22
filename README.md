@@ -217,6 +217,17 @@ sudo macchanger -r wlan0
 sudo ip link set wlan0 up
 ```
 
+#### Automated MAC address spoofing of active network interface
+```
+# Set the variable for the active network interface
+INTERFACE=$(ip link show | awk '/state UP/ {print $2}' | sed 's/:$//')
+
+# Now use the variable in your commands
+sudo ip link set "$INTERFACE" down
+sudo macchanger -r "$INTERFACE"
+sudo ip link set "$INTERFACE" up
+```
+
 </details>
 
 
