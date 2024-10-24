@@ -272,9 +272,13 @@ cd .. && rm -rf mullvad-vpn-bin/
 <details>
 <summary>Tor Service</summary>
 
-#### Install, Enable and Start the Tor Service
+#### Install the Tor Service
 ```
 sudo pacman -S tor --noconfirm
+```
+
+#### Enable and Start the Tor Service (Optional)
+```
 sudo systemctl enable tor.service
 sudo systemctl start tor.service
 ```
