@@ -248,7 +248,7 @@ mkdir -p ~/build/{packages,sources,srcpackages,makepkglogs}
 #### Install
 ```
 # Clone into the Mullvad VPN binary repository
-git clone https://aur.archlinux.org/mullvad-vpn-bin.git && cd mullvad-vpn-bin/
+git clone https://aur.archlinux.org/mullvad-vpn.git && cd mullvad-vpn/
 
 # Download the Mullvad code signing key
 wget https://mullvad.net/media/mullvad-code-signing.asc
