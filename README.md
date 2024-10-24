@@ -441,6 +441,36 @@ systemctl restart "${active_dm}.service"
 </details>
 
 
+## Miscellaneous
+
+<details>
+<summary>Screen Mirroring</summary>
+
+#### Install xrander
+```
+sudo pacman -S xorg-xrandr --noconfirm
+```
+
+#### Check Connected Displays
+```
+xrandr
+```
+
+#### Auto-Detect and Enable HDMI Output
+```
+xrandr --output HDMI-1 --auto --same-as eDP-1
+```
+    - HDMI-1: This is your projector. Replace it if your output is different.
+    - eDP-1: This usually represents your laptop's internal display. Check your xrandr output to confirm the correct identifier.
+
+#### Adjust Display Settings (if necessary)
+```
+xrandr --output HDMI-1 --auto --same-as eDP-1 --mode 1920x1080
+```
+
+</details>
+
+
 ## Personal Commands
 
 <details>
