@@ -460,8 +460,8 @@ xrandr
 ```
 xrandr --output HDMI-1 --auto --same-as eDP-1
 ```
-    - HDMI-1: This is your projector. Replace it if your output is different.
-    - eDP-1: This usually represents your laptop's internal display. Check your xrandr output to confirm the correct identifier.
+- HDMI-1: This is your projector. Replace it if your output is different.
+- eDP-1: This usually represents your laptop's internal display. Check your xrandr output to confirm the correct identifier.
 
 #### Adjust Display Settings (if necessary)
 ```
