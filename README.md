@@ -444,6 +444,30 @@ systemctl restart "${active_dm}.service"
 
 </details>
 
+<details>
+<summary>error: failed to synchronize all databases (unable to lock database)</summary>
+
+#### Check for Running Processes:
+- First, check if another instance of pacman or pamac is running.
+```
+ps aux | grep pacman
+```
+- If you see any processes, wait for them to complete or terminate them if you're sure they are stuck.
+
+#### Remove Lock Files:
+- If no other processes are running, you may need to remove the lock file manually. Run:
+```
+sudo rm /var/lib/pacman/db.lck
+```
+
+#### Update the System Again:
+- After removing the lock file, try updating the package database again:
+```
+sudo pacman -Syu
+```
+
+</details>
+
 
 ## Miscellaneous
 
