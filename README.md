@@ -190,9 +190,14 @@ systemctl status bluetooth.service
 bluetoothctl
 ```
 
-#### Enable Simultaneous output to multiple audio devices
+#### Enable simultaneous output to multiple audio devices
 ```
 pactl load-module module-combine-sink
+```
+
+#### Disable simultaneous output to multiple audio devices
+```
+pactl unload-module XXXXXXXXX
 ```
 
 </details>
