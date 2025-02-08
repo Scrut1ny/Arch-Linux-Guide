@@ -176,8 +176,7 @@ sudo pacman -S bluez bluez-utils --noconfirm
 
 #### Start and enable the Bluetooth service:
 ```
-sudo systemctl start bluetooth.service
-sudo systemctl enable bluetooth.service
+sudo systemctl enable --now bluetooth.service
 ```
 
 #### Verify the service is running:
@@ -288,7 +287,7 @@ gpg --fingerprint admin@mullvad.net
 BUILDDIR=/tmp/makepkg makepkg -sirc
 
 # Clean up by removing the repository directory
-cd .. && rm -rf mullvad-vpn-bin/
+cd .. && rm -rf mullvad-vpn-bin/ ~/build/{packages,sources}/*
 ```
 
 </details>
