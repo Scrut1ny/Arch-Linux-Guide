@@ -202,6 +202,25 @@ pactl unload-module XXXXXXXXX
 
 </details>
 
+<details>
+<summary>Automatic Mirrors</summary>
+
+#### Install Package:
+```
+sudo pacman -S reflector --noconfirm
+```
+
+#### Generate and Save the Mirror List:
+```
+sudo reflector --country 'YOUR_COUNTRY' --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+```
+
+#### Update Package Databases:
+```
+sudo pacman -Syy
+```
+
+</details>
 
 ## Installing Software
 
