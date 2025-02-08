@@ -174,9 +174,10 @@ sudo systemctl restart NetworkManager.service
 sudo pacman -S bluez bluez-utils --noconfirm
 ```
 
-#### Start and enable the Bluetooth service:
+#### Enable and start the Bluetooth service:
 ```
 sudo systemctl enable --now bluetooth.service
+sudo systemctl restart bluetooth.service
 ```
 
 #### Verify the service is running:
