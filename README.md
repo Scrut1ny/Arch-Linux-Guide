@@ -436,6 +436,7 @@ kcmshell6 kcm_touchpad
 ```
 sudo pacman -S powerdevil --noconfirm
 ```
+- *Now restart your DM for changes to take effect.*
 
 </details>
 
