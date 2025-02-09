@@ -432,6 +432,11 @@ ollama run taozhiyuai/llama-3-8b-lexi-uncensored:f16
 kcmshell6 kcm_touchpad
 ```
 
+#### Missing Brightness Adjustment Bar (laptop)
+```
+sudo pacman -S powerdevil --noconfirm
+```
+
 </details>
 
 <details>
