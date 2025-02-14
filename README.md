@@ -351,7 +351,7 @@ sudo pacman -Sy ccid opensc --noconfirm
 
 #### 2. Start & Enable the PC/SC Smart Card Daemon
 ```
-sudo systemctl enable --now pcscd.service
+sudo systemctl enable --now pcscd.socket
 ```
 
 #### 3. Load security device
