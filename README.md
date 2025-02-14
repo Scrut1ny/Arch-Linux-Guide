@@ -349,7 +349,7 @@ kitty +kitten themes
 sudo pacman -Sy ccid opensc --noconfirm
 ```
 
-#### 2. Start & Enable the PC/SC Smart Card Daemon
+#### 2. Enable & start the PC/SC Smart Card Daemon
 ```
 sudo systemctl enable --now pcscd.socket
 ```
