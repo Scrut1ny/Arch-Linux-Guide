@@ -359,6 +359,7 @@ sudo systemctl enable --now pcscd.socket
 ```
 /usr/lib/opensc-pkcs11.so
 ```
+![image](https://github.com/user-attachments/assets/fefb339c-7ff5-49f8-bfee-8e0908f2cbf1)
 
 ---
 
