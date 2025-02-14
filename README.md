@@ -344,28 +344,26 @@ kitty +kitten themes
 <details>
 <summary>Common Access Card (CAC) / Smartcard</summary>
 
-- [Common Access Card](https://wiki.archlinux.org/title/Common_Access_Card)
-- [militarycac.com](https://militarycac.com/linux.htm)
-- [dod-cac-ubuntu-linuxmint](https://cubiclenate.com/linux/applications/utilities/dod-cac-ubuntu-linuxmint/)
-- [cac-scripts](https://github.com/csmig/cac-scripts)
-- [linux_cac](https://github.com/jdjaxon/linux_cac)
-
-#### Install required packages
+#### 1. Install required packages
 ```
 sudo pacman -Sy ccid opensc --noconfirm
 ```
 
-#### Start & Enable the PC/SC Smart Card Daemon
+#### 2. Start & Enable the PC/SC Smart Card Daemon
 ```
 sudo systemctl start pcscd
 sudo systemctl enable pcscd
 ```
 
-#### Load security device
+#### 3. Load security device
 - Navigate to Settings > Privacy & Security > Security Devices and click "Load" to load a module using:
 ```
 /usr/lib/opensc-pkcs11.so
 ```
+
+---
+
+#### Automated CLI - Load security device
 - Flatpak Install
 ```
 modutil -dbdir "$HOME/.var/app/io.gitlab.librewolf-community/.librewolf/*/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
@@ -384,6 +382,13 @@ modutil -dbdir sql:.pki/nssdb/ -list
 ```
 modutil -dbdir sql:.pki/nssdb/ -add "CAC Module" -libfile /usr/lib/opensc-pkcs11.so
 ```
+
+#### References:
+- [Common Access Card](https://wiki.archlinux.org/title/Common_Access_Card)
+- [militarycac.com](https://militarycac.com/linux.htm)
+- [dod-cac-ubuntu-linuxmint](https://cubiclenate.com/linux/applications/utilities/dod-cac-ubuntu-linuxmint/)
+- [cac-scripts](https://github.com/csmig/cac-scripts)
+- [linux_cac](https://github.com/jdjaxon/linux_cac)
 
 </details>
 
