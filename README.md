@@ -5,7 +5,7 @@
 
 #### Update package lists and upgrade all packages:
 ```
-sudo pacman -Syu --noconfirm
+sudo pacman -Syyu --noconfirm
 ```
 
 </details>
