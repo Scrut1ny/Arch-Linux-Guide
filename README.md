@@ -534,6 +534,14 @@ xrandr --output HDMI-1 --auto --same-as eDP-1 --mode 1920x1080
 
 </details>
 
+<details>
+<summary>Partitioning</summary>
+
+#### Tools:
+- [gparted](https://archlinux.org/packages/extra/x86_64/gparted/)
+
+</details>
+
 
 ## Personal Commands
 
