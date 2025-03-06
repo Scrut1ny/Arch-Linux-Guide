@@ -24,10 +24,13 @@ sudo pacman -S <package-name>
 sudo pacman -R <package-name>
 ```
 
-#### Remove a package and its dependencies:
+#### Remove a package, configuration files, and its dependencies:
 ```
 sudo pacman -Rns <package-name>
 ```
+- -R: Remove the package.
+- -n: Remove the package's configuration files (if they aren't needed elsewhere).
+- -s: Remove dependencies that were installed specifically for this package and are no longer needed by any other installed packages.
 
 #### Search for a package:
 ```
