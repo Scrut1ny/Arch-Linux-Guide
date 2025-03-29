@@ -543,6 +543,11 @@ xrandr --output HDMI-1 --auto --same-as eDP-1 --mode 1920x1080
 #### Tools:
 - [gparted](https://archlinux.org/packages/extra/x86_64/gparted/)
 
+#### Create a Manual Boot Entry (Windows):
+```
+sudo efibootmgr -c -d /dev/nvme0n1 -p 1 -L "Windows" -l "\EFI\Microsoft\Boot\bootmgfw.efi"
+```
+
 </details>
 
 
