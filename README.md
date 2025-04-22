@@ -548,6 +548,27 @@ xrandr --output HDMI-1 --auto --same-as eDP-1 --mode 1920x1080
 sudo efibootmgr -c -d /dev/nvme0n1 -p 1 -L "Windows" -l "\EFI\Microsoft\Boot\bootmgfw.efi"
 ```
 
+#### Correct Boot Loader reference:
+```
+Available Boot Loaders on ESP:
+          ESP: /boot (/dev/disk/by-partuuid/80b88c64-c32b-46a3-887f-8c2944f2d03a)
+         File: ├─/EFI/systemd/systemd-bootx64.efi (systemd-boot 257.5-1-arch)
+               └─/EFI/BOOT/BOOTX64.EFI (systemd-boot 257.5-1-arch)
+
+Boot Loaders Listed in EFI Variables:
+        Title: Linux Boot Manager
+           ID: 0x0001
+       Status: active, boot-order
+    Partition: /dev/disk/by-partuuid/80b88c64-c32b-46a3-887f-8c2944f2d03a
+         File: └─/EFI/systemd/systemd-bootx64.efi
+
+        Title: Windows Boot Manager
+           ID: 0x0002
+       Status: active, boot-order
+    Partition: /dev/disk/by-partuuid/80b88c64-c32b-46a3-887f-8c2944f2d03a
+         File: └─/EFI/Microsoft/Boot/bootmgfw.efi
+```
+
 </details>
 
 
