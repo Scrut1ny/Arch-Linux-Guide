@@ -216,7 +216,7 @@ sudo pacman -S reflector --noconfirm
 #### Generate and Save the Mirror List:
 - [Country Codes Alpha-2 & Alpha-3](https://www.iban.com/country-codes)
 ```
-sudo reflector --country 'YOUR_COUNTRY' --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
 ```
 
 #### Update Package Databases:
