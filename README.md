@@ -269,25 +269,12 @@ sudo nano /etc/makepkg.conf
 ```
 ![config](https://github.com/user-attachments/assets/2cae9a80-db70-452a-ad00-5a863d42bdc3)
 
-```
-mkdir -p ~/build/{packages,sources,srcpackages,makepkglogs}
-```
-
 #### Install
 ```
-# Clone the Mullvad VPN binary repository and navigate into it
+mkdir -p ~/build/{packages,sources,srcpackages,makepkglogs}
 git clone https://aur.archlinux.org/mullvad-vpn-bin.git && cd mullvad-vpn-bin/
-
-# Download and import Mullvad's code signing key
-wget -q https://mullvad.net/media/mullvad-code-signing.asc && gpg --import mullvad-code-signing.asc
-
-# Verify the fingerprint of the Mullvad signing key
-gpg --fingerprint admin@mullvad.net
-
-# Build the package with necessary dependencies
+wget -q https://mullvad.net/media/mullvad-code-signing.asc && gpg --import mullvad-code-signing.asc && gpg --fingerprint admin@mullvad.net
 BUILDDIR=/tmp/makepkg makepkg -sirc
-
-# Clean up the repository and build files
 cd .. && rm -rf mullvad-vpn-bin/ ~/build/{packages,sources}/*
 ```
 
