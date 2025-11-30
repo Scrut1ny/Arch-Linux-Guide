@@ -536,6 +536,9 @@ sudo efibootmgr -c -d /dev/nvme0n1 -p 1 -L "Windows" -l "\EFI\Microsoft\Boot\boo
 ```
 echo -e "title   Windows\nefi     /EFI/Microsoft/Boot/bootmgfw.efi" | sudo tee /boot/loader/entries/windows.conf > /dev/null
 ```
+```
+sudo bootctl update
+```
 
 #### Correct Boot Loader reference:
 ```
