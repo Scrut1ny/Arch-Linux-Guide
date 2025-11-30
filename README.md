@@ -532,6 +532,11 @@ xrandr --output HDMI-1 --auto --same-as eDP-1 --mode 1920x1080
 sudo efibootmgr -c -d /dev/nvme0n1 -p 1 -L "Windows" -l "\EFI\Microsoft\Boot\bootmgfw.efi"
 ```
 
+#### Create Systemd-boot Manual Boot Entry (Windows):
+```
+echo -e "title   Windows\nefi     /EFI/Microsoft/Boot/bootmgfw.efi" | sudo tee /boot/loader/entries/windows.conf > /dev/null
+```
+
 #### Correct Boot Loader reference:
 ```
 Available Boot Loaders on ESP:
