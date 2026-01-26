@@ -331,6 +331,8 @@ kitty +kitten themes
 <details>
 <summary>Common Access Card (CAC) / Smartcard</summary>
 
+- https://wiki.archlinux.org/title/Common_Access_Card
+
 #### 1. Install required packages
 ```
 sudo pacman -Sy ccid opensc --noconfirm
