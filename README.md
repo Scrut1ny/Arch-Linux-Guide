@@ -176,8 +176,8 @@ sudo systemctl restart NetworkManager.service
 ```bash
 sudo pacman -S bluez bluez-utils --noconfirm
 ```
-- *“Failed to start org.bluez.obex service: The name is not activatable”*
 #### File Transfer
+- *“Failed to start org.bluez.obex service: The name is not activatable”*
 ```bash
 sudo pacman -S bluez-obex --noconfirm
 ```
