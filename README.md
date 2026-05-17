@@ -307,22 +307,6 @@ sudo systemctl restart tor
 
 </details>
 
-
-<details>
-<summary>Kitty (Terminal)</summary>
-
-#### Install Kitty
-```bash
-sudo pacman -S kitty --noconfirm
-```
-#### Configure Kitty theme
-```bash
-kitty +kitten themes
-```
-
-</details>
-
-
 <details>
 <summary>Common Access Card (CAC) / Smartcard</summary>
 
@@ -545,15 +529,10 @@ sudo pacman -Syu --noconfirm # Update package lists and upgrade all packages
 sudo pacman -Sc --noconfirm # Clean the package cache
 sudo pacman -Rns $(pacman -Qdtq) --noconfirm # Remove all unused packages and dependencies
 
-kitty +kitten themes "Everforest Dark Hard"
-
 flatpak install -y io.gitlab.librewolf-community
 flatpak install -y org.libreoffice.LibreOffice
 flatpak install -y org.keepassxc.KeePassXC
 flatpak install -y io.freetubeapp.FreeTube
-flatpak install -y org.flameshot.Flameshot
-flatpak install -y com.atlauncher.ATLauncher
-flatpak install -y org.signal.Signal
 flatpak install -y com.github.tchx84.Flatseal
 ```
 
