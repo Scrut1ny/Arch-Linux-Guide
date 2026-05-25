@@ -396,6 +396,28 @@ ollama run taozhiyuai/llama-3-8b-lexi-uncensored:f16
 ## Troubleshooting
 
 <details>
+<summary>Windows overwrites Linux EFI Boot entry</summary>
+
+1. Boot into live Linux enviroment
+- [Download `archlinux-XXXX.XX.XX-x86_64.iso`](https://archlinux.org/download/)
+- [Download `Ventoy` (*optional*)](https://github.com/ventoy/Ventoy)
+
+2. Recreate missing NVRAM entry
+```
+efibootmgr --create --disk /dev/nvmeXnX --part 1 --label "Linux Boot Manager" --loader '\EFI\systemd\systemd-bootx64.efi'
+```
+- *Note: Set `/dev/nvmeXnX` to your ROOT partition, NOT your EFI.*
+
+3. Reorder NVRAM entries
+```
+efibootmgr -o XXXX,YYYY
+```
+
+- Note: `BootXXXX` entries are located and accessable via `/sys/firmware/efi/efivars`.
+
+</details>
+
+<details>
 <summary>KDE Plasma</summary>
 
 #### Missing Touchpad Settings Page
