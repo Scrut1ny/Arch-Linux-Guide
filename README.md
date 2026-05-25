@@ -360,22 +360,6 @@ modutil -dbdir sql:.pki/nssdb/ -add "CAC Module" -libfile /usr/lib/opensc-pkcs11
 
 
 <details>
-<summary>yt-dlp & ffmpeg</summary>
-
-#### Install yt-dlp
-```bash
-sudo curl -fsSL https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp && sudo chmod +x /usr/local/bin/yt-dlp
-```
-
-#### Install ffmpeg (optional)
-```bash
-sudo pacman -S ffmpeg --noconfirm
-```
-
-</details>
-
-
-<details>
 <summary>ollama</summary>
 
 #### Install ollama
