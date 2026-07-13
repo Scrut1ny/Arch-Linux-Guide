@@ -404,6 +404,8 @@ efibootmgr -o XXXX,YYYY
 <details>
 <summary>Missing Windows `EFI System Partition` - Fix</summary>
 
+- NOTE: Make sure to change the disk # if needed!
+
 ```cmd
 (echo select volume C&echo shrink desired=100&echo select disk 0&echo create partition efi size=100&echo format quick fs=fat32 label=ESP&echo assign letter=S&echo exit) | diskpart && bcdboot C:\Windows /s S: /f UEFI
 ```
