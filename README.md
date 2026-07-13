@@ -200,12 +200,12 @@ bluetoothctl
 
 #### Enable simultaneous output to multiple audio devices
 ```bash
-pactl load-module module-combine-sink
+module_id=$(pactl load-module module-combine-sink)
 ```
 
 #### Disable simultaneous output to multiple audio devices
 ```bash
-pactl unload-module XXXXXXXXX
+pactl unload-module "$module_id"
 ```
 
 </details>
