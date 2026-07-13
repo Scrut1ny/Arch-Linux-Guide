@@ -380,7 +380,7 @@ ollama run taozhiyuai/llama-3-8b-lexi-uncensored:f16
 ## Troubleshooting
 
 <details>
-<summary>Windows overwrites Linux EFI Boot entry</summary>
+<summary>Windows overwrites Linux EFI Boot entry - Fix</summary>
 
 1. Boot into live Linux enviroment
 - [Download `archlinux-XXXX.XX.XX-x86_64.iso`](https://archlinux.org/download/)
@@ -398,6 +398,25 @@ efibootmgr -o XXXX,YYYY
 ```
 
 - Note: `BootXXXX` entries are located and accessable via `/sys/firmware/efi/efivars`.
+
+</details>
+
+<details>
+<summary>Missing Windows `EFI System Partition` - Fix</summary>
+
+```
+(
+echo select volume C
+echo shrink desired=100
+echo select disk 0
+echo create partition efi size=100
+echo format quick fs=fat32 label=ESP
+echo assign letter=S
+echo exit
+) | diskpart
+
+bcdboot C:\Windows /s S: /f UEFI
+```
 
 </details>
 
