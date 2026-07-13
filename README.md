@@ -404,7 +404,7 @@ efibootmgr -o XXXX,YYYY
 <details>
 <summary>Missing Windows `EFI System Partition` - Fix</summary>
 
-```
+```cmd
 (
 echo select volume C
 echo shrink desired=100
