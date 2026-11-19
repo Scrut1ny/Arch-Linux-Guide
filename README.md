@@ -231,7 +231,7 @@ sudo pacman -Syy
 
 </details>
 
-## Installing Software
+## Software
 
 <details>
 <summary>macchanger</summary>
@@ -307,75 +307,6 @@ sudo systemctl restart tor
 
 </details>
 
-<details>
-<summary>Common Access Card (CAC) / Smartcard</summary>
-
-#### 1. Install required packages
-```bash
-sudo pacman -Sy ccid opensc --noconfirm
-```
-
-#### 2. Enable & start the PC/SC Smart Card Daemon
-```bash
-sudo systemctl enable --now pcscd.socket
-```
-
-#### 3. Load security device
-- Navigate to Settings > Privacy & Security > Security Devices and click "Load" to load a module using:
-```bash
-/usr/lib/opensc-pkcs11.so
-```
-![image](https://github.com/user-attachments/assets/fefb339c-7ff5-49f8-bfee-8e0908f2cbf1)
-
----
-
-#### Automated CLI - Load security device
-- Flatpak Install
-```bash
-modutil -dbdir "$HOME/.var/app/io.gitlab.librewolf-community/.librewolf/*/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
-```
-- System Install
-```bash
-modutil -dbdir "$HOME/.mozilla/firefox/*/cert9.db" -add "CAC Module" -libfile "/usr/lib/opensc-pkcs11.so"
-```
-
-#### List available PKCS #11 Modules
-```bash
-modutil -dbdir sql:.pki/nssdb/ -list
-```
-
-#### Add custom "CAC Module" to PKCS #11 Module
-```bash
-modutil -dbdir sql:.pki/nssdb/ -add "CAC Module" -libfile /usr/lib/opensc-pkcs11.so
-```
-
-#### References:
-- [Common Access Card](https://wiki.archlinux.org/title/Common_Access_Card)
-- [militarycac.com](https://militarycac.com/linux.htm)
-- [dod-cac-ubuntu-linuxmint](https://cubiclenate.com/linux/applications/utilities/dod-cac-ubuntu-linuxmint/)
-- [cac-scripts](https://github.com/csmig/cac-scripts)
-- [linux_cac](https://github.com/jdjaxon/linux_cac)
-
-</details>
-
-
-<details>
-<summary>ollama</summary>
-
-#### Install ollama
-```bash
-curl -fsSL https://ollama.com/install.sh | sh
-```
-
-#### Install any llama instance
-
-- [https://ollama.com/](https://ollama.com/)
-```bash
-ollama run taozhiyuai/llama-3-8b-lexi-uncensored:f16
-```
-
-</details>
-
 
 ## Troubleshooting
 
@@ -412,31 +343,7 @@ efibootmgr -o XXXX,YYYY
 
 </details>
 
-<details>
-<summary>KDE Plasma</summary>
 
-#### Missing Touchpad Settings Page
-```bash
-kcmshell6 kcm_touchpad
-```
-
-#### Missing Brightness Adjustment Bar (laptop)
-```bash
-sudo pacman -S powerdevil --noconfirm
-```
-- *Now restart your DM for changes to take effect.*
-
-</details>
-
-<details>
-<summary>Display Manager</summary>
-
-#### Display Manager not loading
-```bash
-sudo systemctl restart display-manager
-```
-
-</details>
 
 <details>
 <summary>error: failed to synchronize all databases (unable to lock database)</summary>
@@ -458,99 +365,6 @@ sudo rm /var/lib/pacman/db.lck
 - After removing the lock file, try updating the package database again:
 ```bash
 sudo pacman -Syu
-```
-
-</details>
-
-
-## Miscellaneous
-
-<details>
-<summary>Screen Mirroring</summary>
-
-#### Install xrander
-```bash
-sudo pacman -S xorg-xrandr --noconfirm
-```
-
-#### Check Connected Displays
-```bash
-xrandr
-```
-
-#### Auto-Detect and Enable HDMI Output
-```bash
-xrandr --output HDMI-1 --auto --same-as eDP-1
-```
-- HDMI-1: This is your projector. Replace it if your output is different.
-- eDP-1: This usually represents your laptop's internal display. Check your xrandr output to confirm the correct identifier.
-
-#### Adjust Display Settings (if necessary)
-```bash
-xrandr --output HDMI-1 --auto --same-as eDP-1 --mode 1920x1080
-```
-
-</details>
-
-<details>
-<summary>Partitioning</summary>
-
-#### Tools:
-- [gparted](https://archlinux.org/packages/extra/x86_64/gparted/)
-
-#### Create a Manual Boot Entry (Windows):
-```bash
-sudo efibootmgr -c -d /dev/nvme0n1 -p 1 -L "Windows" -l "\EFI\Microsoft\Boot\bootmgfw.efi"
-```
-
-#### Create Systemd-boot Manual Boot Entry (Windows):
-```bash
-echo -e "title   Windows\nefi     /EFI/Microsoft/Boot/bootmgfw.efi" | sudo tee /boot/loader/entries/windows.conf > /dev/null
-```
-```bash
-sudo bootctl update
-```
-
-#### Correct Boot Loader reference:
-```
-Available Boot Loaders on ESP:
-          ESP: /boot (/dev/disk/by-partuuid/80b88c64-c32b-46a3-887f-8c2944f2d03a)
-         File: ├─/EFI/systemd/systemd-bootx64.efi (systemd-boot 257.5-1-arch)
-               └─/EFI/BOOT/BOOTX64.EFI (systemd-boot 257.5-1-arch)
-
-Boot Loaders Listed in EFI Variables:
-        Title: Linux Boot Manager
-           ID: 0x0001
-       Status: active, boot-order
-    Partition: /dev/disk/by-partuuid/80b88c64-c32b-46a3-887f-8c2944f2d03a
-         File: └─/EFI/systemd/systemd-bootx64.efi
-
-        Title: Windows Boot Manager
-           ID: 0x0002
-       Status: active, boot-order
-    Partition: /dev/disk/by-partuuid/80b88c64-c32b-46a3-887f-8c2944f2d03a
-         File: └─/EFI/Microsoft/Boot/bootmgfw.efi
-```
-
-</details>
-
-
-## Personal Commands
-
-<details>
-<summary>Install all Apps</summary>
-
-```bash
-sudo pacman -Syu --noconfirm # Update package lists and upgrade all packages
-
-sudo pacman -Sc --noconfirm # Clean the package cache
-sudo pacman -Rns $(pacman -Qdtq) --noconfirm # Remove all unused packages and dependencies
-
-flatpak install -y io.gitlab.librewolf-community
-flatpak install -y org.libreoffice.LibreOffice
-flatpak install -y org.keepassxc.KeePassXC
-flatpak install -y io.freetubeapp.FreeTube
-flatpak install -y com.github.tchx84.Flatseal
 ```
 
 </details>
